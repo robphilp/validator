@@ -1,0 +1,12 @@
+{
+    "name": "robphilp/validator",
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+          "RobPhilp\\Validator\\": "src/Validator"
+        }
+    }
+}
