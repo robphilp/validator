@@ -2,12 +2,6 @@
 
 use RobPhilp\Validator\NotNullValidator;
 
-/**
- * Created by PhpStorm.
- * User: robertphilp
- * Date: 14/10/2016
- * Time: 20:44
- */
 class NotNullValidatorTest extends PHPUnit_Framework_TestCase
 {
     /**
@@ -15,10 +9,20 @@ class NotNullValidatorTest extends PHPUnit_Framework_TestCase
      */
     public function assertNullIsNull()
     {
-        $validator = new NotNullValidator();
-        $valid = $validator->isValid(null);
-        
+        $valid = NotNullValidator::create()->isValid(null);
+
         $this->assertFalse($valid);
+
+    }
+
+    /**
+     * @test
+     */
+    public function assertStringIsNotNull()
+    {
+        $valid = NotNullValidator::create()->isValid('hello');
+
+        $this->assertTrue($valid);
 
     }
 }

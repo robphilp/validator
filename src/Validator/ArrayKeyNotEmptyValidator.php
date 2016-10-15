@@ -2,7 +2,7 @@
 
 namespace RobPhilp\Validator;
 
-class ArrayValueNotEmptyValidator implements ValidatorInterface
+class ArrayKeyNotEmptyValidator implements ValidatorInterface
 {
     private $array;
 
